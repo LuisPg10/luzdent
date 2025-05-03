@@ -1,11 +1,3 @@
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import {
   Clock,
   MapPin,
@@ -16,52 +8,23 @@ import {
   Star,
 } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Navbar } from '@/components/ui/Navbar';
+
 import placeHolderImage from '../assets/placeholder.svg';
 
 export default function MainPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-white">
-        <div className="container flex h-16 items-center justify-between px-6 md:px-10">
-          <div className="flex items-center gap-2 pl-2">
-            <span className="text-2xl font-bold text-cyan-600">Luz Dent</span>
-          </div>
-          <nav className="hidden gap-6 md:flex">
-            <a
-              href="#inicio"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Inicio
-            </a>
-            <a
-              href="#servicios"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Servicios
-            </a>
-            <a
-              href="#nosotros"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Nosotros
-            </a>
-            <a
-              href="#testimonios"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Testimonios
-            </a>
-            <a
-              href="#contacto"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Contacto
-            </a>
-          </nav>
-          <Button className="mr-2 bg-cyan-600 hover:bg-cyan-700">
-            Agendar Cita
-          </Button>
-        </div>
+        <Navbar />
       </header>
       <main className="flex-1">
         <section
