@@ -1,12 +1,4 @@
-import {
-  Clock,
-  MapPin,
-  Phone,
-  Mail,
-  CheckCircle,
-  User,
-  Star,
-} from 'lucide-react';
+import { Clock, MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -17,6 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Navbar } from '@/components/ui/Navbar';
+import { HeroSection } from '@/components/sections/HeroSection';
+import { AboutSection } from '@/components/sections/AboutSection';
 
 import placeHolderImage from '../assets/placeholder.svg';
 
@@ -27,114 +21,9 @@ export default function MainPage() {
         <Navbar />
       </header>
       <main className="flex-1">
-        <section
-          id="inicio"
-          className="w-full bg-gradient-to-r from-cyan-50 to-blue-50 py-12 md:py-24 lg:py-32"
-        >
-          <div className="container px-4 md:px-6">
-            <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="space-y-4">
-                <h1 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Sonrisas saludables para toda la familia
-                </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl">
-                  En Luz Dent nos dedicamos a brindar atención odontológica de
-                  calidad con tecnología de vanguardia y un equipo de
-                  profesionales altamente calificados.
-                </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-cyan-600 hover:bg-cyan-700">
-                    Agendar Cita
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-cyan-600 text-cyan-600 hover:bg-cyan-50"
-                  >
-                    Conocer Más
-                  </Button>
-                </div>
-              </div>
-              <div className="mx-auto w-full max-w-[500px] lg:max-w-none">
-                <img
-                  src={placeHolderImage}
-                  width="550"
-                  height="550"
-                  alt="Equipo médico de la clínica dental"
-                  className="w-full rounded-xl object-cover shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
-        <section className="w-full bg-white py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
-                  Por qué elegirnos
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-5xl">
-                  Cuidado dental de excelencia
-                </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Ofrecemos tratamientos personalizados con la última tecnología
-                  y un equipo de especialistas comprometidos con tu salud bucal.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-              <Card className="border-cyan-100 shadow-md transition-shadow hover:shadow-lg">
-                <CardHeader className="pb-2">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-100">
-                    <CheckCircle className="h-6 w-6 text-cyan-600" />
-                  </div>
-                  <CardTitle className="text-xl text-cyan-800">
-                    Tecnología avanzada
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-500">
-                    Contamos con equipos de última generación para diagnósticos
-                    precisos y tratamientos efectivos.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card className="border-cyan-100 shadow-md transition-shadow hover:shadow-lg">
-                <CardHeader className="pb-2">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-100">
-                    <User className="h-6 w-6 text-cyan-600" />
-                  </div>
-                  <CardTitle className="text-xl text-cyan-800">
-                    Profesionales expertos
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-500">
-                    Nuestro equipo está formado por especialistas con amplia
-                    experiencia en todas las áreas de la odontología.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              <Card className="border-cyan-100 shadow-md transition-shadow hover:shadow-lg">
-                <CardHeader className="pb-2">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-100">
-                    <Star className="h-6 w-6 text-cyan-600" />
-                  </div>
-                  <CardTitle className="text-xl text-cyan-800">
-                    Atención personalizada
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-500">
-                    Cada paciente es único, por eso desarrollamos planes de
-                    tratamiento adaptados a tus necesidades específicas.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <AboutSection />
 
         <section
           id="servicios"
