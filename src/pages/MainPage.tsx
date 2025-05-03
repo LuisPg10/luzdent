@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone, Mail, CheckCircle, Star } from 'lucide-react';
+import { Clock, MapPin, Phone, Mail, Star } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -8,11 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+
 import { Navbar } from '@/components/ui/Navbar';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { AditionalInfoSection } from '@/components/sections/AditionalInfoSection';
+import { ServiceSection } from '@/components/sections/ServiceSection';
 import { AboutSection } from '@/components/sections/AboutSection';
-
-import placeHolderImage from '../assets/placeholder.svg';
 
 export default function MainPage() {
   return (
@@ -23,141 +24,11 @@ export default function MainPage() {
       <main className="flex-1">
         <HeroSection />
 
+        <AditionalInfoSection />
+
+        <ServiceSection />
+
         <AboutSection />
-
-        <section
-          id="servicios"
-          className="w-full bg-gray-50 py-12 md:py-24 lg:py-32"
-        >
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
-                  Nuestros servicios
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-5xl">
-                  Servicios odontológicos completos
-                </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Ofrecemos una amplia gama de tratamientos dentales para toda
-                  la familia.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              {[
-                {
-                  title: 'Odontología general',
-                  description:
-                    'Limpiezas, empastes, extracciones y tratamientos preventivos para mantener tu salud bucal.',
-                  image: '',
-                },
-                {
-                  title: 'Ortodoncia',
-                  description:
-                    'Brackets tradicionales, invisibles y otros tratamientos para corregir la posición de tus dientes.',
-                  image: '',
-                },
-                {
-                  title: 'Implantes dentales',
-                  description:
-                    'Soluciones permanentes para reemplazar dientes perdidos con resultados naturales.',
-                  image: '',
-                },
-                {
-                  title: 'Estética dental',
-                  description:
-                    'Blanqueamientos, carillas y otros procedimientos para mejorar la apariencia de tu sonrisa.',
-                  image: '',
-                },
-                {
-                  title: 'Odontopediatría',
-                  description:
-                    'Atención especializada para los más pequeños en un ambiente amigable y seguro.',
-                  image: '',
-                },
-                {
-                  title: 'Periodoncia',
-                  description:
-                    'Tratamientos para las enfermedades de las encías y tejidos que soportan los dientes.',
-                  image: '',
-                },
-              ].map((service, index) => (
-                <Card
-                  key={index}
-                  className="overflow-hidden border-cyan-100 shadow-md transition-shadow hover:shadow-lg"
-                  withImage
-                >
-                  <img
-                    src={service.image || placeHolderImage}
-                    alt={service.title}
-                    width="300"
-                    height="200"
-                    className="h-48 w-full object-cover"
-                  />
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-xl text-cyan-800">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-500">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="nosotros"
-          className="w-full bg-white py-12 md:py-24 lg:py-32"
-        >
-          <div className="container px-4 md:px-6">
-            <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="mx-auto w-full max-w-[500px] lg:max-w-none">
-                <img
-                  src={placeHolderImage}
-                  width="550"
-                  height="550"
-                  alt="Equipo de profesionales de la clínica dental"
-                  className="w-full rounded-xl object-cover shadow-xl"
-                />
-              </div>
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
-                  Nuestro equipo
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-4xl md:text-5xl">
-                  Profesionales comprometidos con tu salud
-                </h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl">
-                  Nuestro equipo está formado por odontólogos especializados en
-                  diferentes áreas, con amplia experiencia y en constante
-                  formación para ofrecerte los mejores tratamientos.
-                </p>
-                <ul className="space-y-2">
-                  {[
-                    'Odontólogos con más de 15 años de experiencia',
-                    'Especialistas certificados en todas las áreas',
-                    'Formación continua en las últimas técnicas',
-                    'Trato humano y cercano con cada paciente',
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 flex-shrink-0 text-cyan-600" />
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button className="mt-4 bg-cyan-600 hover:bg-cyan-700">
-                  Conoce a nuestro equipo
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section
           id="testimonios"
