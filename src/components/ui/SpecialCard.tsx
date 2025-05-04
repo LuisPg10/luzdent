@@ -1,4 +1,4 @@
-import { LucideIcon } from 'lucide-react';
+import { ReactNode } from 'react';
 import {
   Card,
   CardContent,
@@ -10,14 +10,14 @@ import {
 interface SpecialCardProps {
   title: string;
   description: string;
-  icon?: LucideIcon;
+  headerComponent?: ReactNode;
   image?: string;
 }
 
 export const SpecialCard = ({
   title,
   description,
-  icon: Icon,
+  headerComponent,
   image,
 }: SpecialCardProps) => {
   return (
@@ -30,11 +30,7 @@ export const SpecialCard = ({
       )}
 
       <CardHeader className="pb-2">
-        {Icon && (
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-100">
-            <Icon className="h-6 w-6 text-cyan-600" />
-          </div>
-        )}
+        {headerComponent}
         <CardTitle className="text-xl text-cyan-800">{title}</CardTitle>
       </CardHeader>
       <CardContent>

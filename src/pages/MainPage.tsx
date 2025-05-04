@@ -1,19 +1,10 @@
-import { Clock, MapPin, Phone, Mail, Star } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-
 import { Navbar } from '@/components/ui/Navbar';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AditionalInfoSection } from '@/components/sections/AditionalInfoSection';
 import { ServiceSection } from '@/components/sections/ServiceSection';
 import { AboutSection } from '@/components/sections/AboutSection';
+import { TestimonialSection } from '@/components/sections/TestimonialSection';
+import { ContactSection } from '@/components/sections/ContactSection';
 
 export default function MainPage() {
   return (
@@ -21,6 +12,7 @@ export default function MainPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-white">
         <Navbar />
       </header>
+
       <main className="flex-1">
         <HeroSection />
 
@@ -30,244 +22,11 @@ export default function MainPage() {
 
         <AboutSection />
 
-        <section
-          id="testimonios"
-          className="w-full bg-gradient-to-r from-cyan-50 to-blue-50 py-12 md:py-24 lg:py-32"
-        >
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
-                  Testimonios
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-5xl">
-                  Lo que dicen nuestros pacientes
-                </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  La satisfacción de nuestros pacientes es nuestro mejor aval.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              {[
-                {
-                  name: 'María González',
-                  text: 'Excelente atención y profesionalismo. Me realizaron un tratamiento de ortodoncia y estoy muy satisfecha con los resultados.',
-                  rating: 5,
-                },
-                {
-                  name: 'Carlos Rodríguez',
-                  text: 'Llevaba años con miedo al dentista hasta que encontré esta clínica. El trato es excepcional y los tratamientos prácticamente indoloros.',
-                  rating: 5,
-                },
-                {
-                  name: 'Laura Martínez',
-                  text: 'Mi hijo de 5 años tenía pánico al dentista, pero el equipo de odontopediatría supo ganarse su confianza. Ahora va encantado a sus revisiones.',
-                  rating: 5,
-                },
-              ].map((testimonial, index) => (
-                <Card
-                  key={index}
-                  className="border-cyan-100 shadow-md transition-shadow hover:shadow-lg"
-                >
-                  <CardHeader>
-                    <div className="mb-2 flex items-center gap-1">
-                      {Array(testimonial.rating)
-                        .fill(0)
-                        .map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-5 w-5 fill-current text-yellow-400"
-                          />
-                        ))}
-                    </div>
-                    <CardTitle className="text-xl text-cyan-800">
-                      {testimonial.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-500">
-                      "{testimonial.text}"
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+        <TestimonialSection />
 
-        <section
-          id="contacto"
-          className="w-full bg-white py-12 md:py-24 lg:py-32"
-        >
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
-                  Contacto
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-4xl">
-                  ¿Necesitas más información?
-                </h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl">
-                  Estamos aquí para resolver todas tus dudas. Contáctanos o
-                  visítanos en nuestra clínica.
-                </p>
-                <div className="mt-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
-                      <MapPin className="h-5 w-5 text-cyan-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-cyan-800">Dirección</h3>
-                      <p className="text-gray-500">Av. Principal 123, Ciudad</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
-                      <Phone className="h-5 w-5 text-cyan-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-cyan-800">Teléfono</h3>
-                      <p className="text-gray-500">+123 456 7890</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
-                      <Mail className="h-5 w-5 text-cyan-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-cyan-800">Email</h3>
-                      <p className="text-gray-500">info@luzdent.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-100">
-                      <Clock className="h-5 w-5 text-cyan-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-cyan-800">Horario</h3>
-                      <p className="text-gray-500">
-                        Lunes a Viernes: 9:00 - 20:00
-                      </p>
-                      <p className="text-gray-500">Sábados: 9:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <Card className="border-cyan-100 shadow-md">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-cyan-800">
-                      Agenda tu cita
-                    </CardTitle>
-                    <CardDescription className="text-gray-500">
-                      Completa el formulario y nos pondremos en contacto contigo
-                      lo antes posible.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form className="space-y-4">
-                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div className="space-y-2">
-                          <label
-                            htmlFor="nombre"
-                            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                          >
-                            Nombre
-                          </label>
-                          <input
-                            id="nombre"
-                            className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                            placeholder="Tu nombre"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label
-                            htmlFor="apellido"
-                            className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                          >
-                            Apellido
-                          </label>
-                          <input
-                            id="apellido"
-                            className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                            placeholder="Tu apellido"
-                          />
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="email"
-                          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          Email
-                        </label>
-                        <input
-                          id="email"
-                          type="email"
-                          className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="tu@email.com"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="telefono"
-                          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          Teléfono
-                        </label>
-                        <input
-                          id="telefono"
-                          type="tel"
-                          className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="+123 456 7890"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="servicio"
-                          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          Servicio de interés
-                        </label>
-                        <select
-                          id="servicio"
-                          className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                        >
-                          <option value="">Selecciona un servicio</option>
-                          <option value="general">Odontología general</option>
-                          <option value="ortodoncia">Ortodoncia</option>
-                          <option value="implantes">Implantes dentales</option>
-                          <option value="estetica">Estética dental</option>
-                          <option value="pediatria">Odontopediatría</option>
-                          <option value="periodoncia">Periodoncia</option>
-                        </select>
-                      </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="mensaje"
-                          className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          Mensaje
-                        </label>
-                        <textarea
-                          id="mensaje"
-                          className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[100px] w-full rounded-md border px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Cuéntanos más sobre tu consulta..."
-                        />
-                      </div>
-                      <Button className="w-full bg-cyan-600 hover:bg-cyan-700">
-                        Enviar solicitud
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactSection />
       </main>
+
       <footer className="w-full border-t bg-cyan-800 text-white">
         <div className="container flex flex-col gap-6 px-4 py-12 md:px-6 lg:flex-row lg:gap-12">
           <div className="flex flex-col gap-3 lg:w-1/3">

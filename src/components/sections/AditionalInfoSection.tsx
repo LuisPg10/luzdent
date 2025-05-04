@@ -26,7 +26,11 @@ export const AditionalInfoSection = () => {
               key={index}
               title={info.title}
               description={info.description}
-              icon={info.icon}
+              headerComponent={
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-100">
+                  <info.icon className="h-6 w-6 text-cyan-600" />
+                </div>
+              }
             />
           ))}
         </div>

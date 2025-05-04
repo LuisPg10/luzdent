@@ -1,4 +1,12 @@
-import { CheckCircle, Star, User } from 'lucide-react';
+import {
+  CheckCircle,
+  Clock,
+  Mail,
+  MapPin,
+  Phone,
+  Star,
+  User,
+} from 'lucide-react';
 
 //* ADITIONAL INFO
 export const infoContent = [
@@ -70,4 +78,48 @@ export const aboutContent = [
   'Especialistas certificados en todas las áreas',
   'Formación continua en las últimas técnicas',
   'Trato humano y cercano con cada paciente',
+];
+
+//* INFO FOR TESTIMONIAL CONTENT
+export const testimonialContent = [
+  {
+    name: 'María González',
+    text: 'Excelente atención y profesionalismo. Me realizaron un tratamiento de ortodoncia y estoy muy satisfecha con los resultados.',
+    rating: 5,
+  },
+  {
+    name: 'Carlos Rodríguez',
+    text: 'Llevaba años con miedo al dentista hasta que encontré esta clínica. El trato es excepcional y los tratamientos prácticamente indoloros.',
+    rating: 5,
+  },
+  {
+    name: 'Laura Martínez',
+    text: 'Mi hijo de 5 años tenía pánico al dentista, pero el equipo de odontopediatría supo ganarse su confianza. Ahora va encantado a sus revisiones.',
+    rating: 5,
+  },
+];
+
+//* INFO FOR CONTACT SECTION
+export const contactContent = [
+  {
+    icon: MapPin,
+    title: 'Dirección',
+    content: ['Cra 78 Calle 57C 10S Barrio Roma Kennedy'],
+  },
+  { icon: Phone, title: 'Teléfono', content: ['+57 314 4608141'] },
+  { icon: Mail, title: 'Email', content: ['luzdentodontologia@gmail.com'] },
+  {
+    icon: Clock,
+    title: 'Horario',
+    content: ['Lunes a Viernes: 9:00 - 20:00', 'Sábados: 9:00 - 14:00'],
+  },
+];
+
+export const serviceOptions = [
+  { value: 'general', text: 'Odontología general' },
+  { value: 'ortodoncia', text: 'Ortodoncia' },
+  { value: 'implantes', text: 'Implantes dentales' },
+  { value: 'estetica', text: 'Estética dental' },
+  { value: 'pediatria', text: 'Odontopediatría' },
+  { value: 'periodoncia', text: 'Periodoncia' },
 ];
