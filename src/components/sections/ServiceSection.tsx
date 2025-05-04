@@ -1,6 +1,6 @@
 import placeHolderImage from '../../assets/placeholder.svg';
 import { serviceContent } from '@/data/section-contents';
-import { SpecialCard } from '../ui/SpecialCard';
+import { CustomCard } from '../ui/CustomCard';
 
 export const ServiceSection = () => {
   return (
@@ -24,7 +24,7 @@ export const ServiceSection = () => {
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
           {serviceContent.map((service, index) => (
-            <SpecialCard
+            <CustomCard
               key={index}
               image={service.image || placeHolderImage}
               title={service.title}

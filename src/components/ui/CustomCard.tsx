@@ -14,7 +14,7 @@ interface SpecialCardProps {
   image?: string;
 }
 
-export const SpecialCard = ({
+export const CustomCard = ({
   title,
   description,
   headerComponent,

@@ -1,7 +1,7 @@
 import { Star } from 'lucide-react';
 
 import { testimonialContent } from '@/data/section-contents';
-import { SpecialCard } from '../ui/SpecialCard';
+import { CustomCard } from '../ui/CustomCard';
 
 export const TestimonialSection = () => {
   return (
@@ -25,7 +25,7 @@ export const TestimonialSection = () => {
         </div>
         <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
           {testimonialContent.map((testimonial, index) => (
-            <SpecialCard
+            <CustomCard
               key={index}
               title={testimonial.name}
               description={testimonial.text}

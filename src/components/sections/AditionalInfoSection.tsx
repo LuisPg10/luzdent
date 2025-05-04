@@ -1,5 +1,5 @@
 import { infoContent } from '@/data/section-contents';
-import { SpecialCard } from '../ui/SpecialCard';
+import { CustomCard } from '../ui/CustomCard';
 
 export const AditionalInfoSection = () => {
   return (
@@ -22,7 +22,7 @@ export const AditionalInfoSection = () => {
 
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
           {infoContent.map((info, index) => (
-            <SpecialCard
+            <CustomCard
               key={index}
               title={info.title}
               description={info.description}
