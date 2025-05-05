@@ -29,7 +29,11 @@ export const CustomCard = ({
       withImage={!!image}
     >
       {image && (
-        <img src={image} alt={title} className="h-48 w-full object-cover" />
+        <img
+          src={image}
+          alt={title}
+          className="h-48 w-full rounded-t-xl object-cover"
+        />
       )}
 
       <CardHeader className="pb-2">
