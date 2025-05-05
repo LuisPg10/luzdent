@@ -75,7 +75,6 @@ export const serviceContent = [
 //* INFO FOR ABOUT SECTION
 export const aboutContent = [
   'Odontólogos con más de 15 años de experiencia',
-  'Especialistas certificados en todas las áreas',
   'Formación continua en las últimas técnicas',
   'Trato humano y cercano con cada paciente',
 ];

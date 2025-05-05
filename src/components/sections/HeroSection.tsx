@@ -20,15 +20,19 @@ export const HeroSection = () => {
               altamente calificados.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button className="bg-cyan-600 hover:bg-cyan-700">
-                Agendar Cita
-              </Button>
-              <Button
-                variant="outline"
-                className="border-cyan-600 text-cyan-600 hover:bg-cyan-50"
-              >
-                Conocer Más
-              </Button>
+              <a href="#agendar-cita">
+                <Button className="bg-cyan-600 hover:bg-cyan-700">
+                  Agendar Cita
+                </Button>
+              </a>
+              <a href="#adicional">
+                <Button
+                  variant="outline"
+                  className="border-cyan-600 text-cyan-600 hover:bg-cyan-50"
+                >
+                  Conocer Más
+                </Button>
+              </a>
             </div>
           </div>
           <div className="mx-auto w-full max-w-[500px] lg:max-w-none">

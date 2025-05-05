@@ -54,9 +54,11 @@ export const Navbar = () => {
         </ul>
       </nav>
 
-      <Button className="mr-2 bg-cyan-600 hover:bg-cyan-700">
-        Agendar Cita
-      </Button>
+      <a href="#agendar-cita">
+        <Button className="mr-2 bg-cyan-600 hover:bg-cyan-700">
+          Agendar Cita
+        </Button>
+      </a>
     </div>
   );
 };
