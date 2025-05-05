@@ -7,7 +7,8 @@ import {
   CardTitle,
 } from './card';
 
-interface SpecialCardProps {
+interface CustomCardProps {
+  id?: string;
   title: string;
   description: string;
   headerComponent?: ReactNode;
@@ -15,13 +16,15 @@ interface SpecialCardProps {
 }
 
 export const CustomCard = ({
+  id,
   title,
   description,
   headerComponent,
   image,
-}: SpecialCardProps) => {
+}: CustomCardProps) => {
   return (
     <Card
+      id={id}
       className="border-cyan-100 shadow-md transition-shadow hover:shadow-lg"
       withImage={!!image}
     >

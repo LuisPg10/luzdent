@@ -25,6 +25,7 @@ export const ServiceSection = () => {
         <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
           {serviceContent.map((service, index) => (
             <CustomCard
+              id={service.title.split(' ')[0].toLowerCase()}
               key={index}
               image={service.image || placeHolderImage}
               title={service.title}
