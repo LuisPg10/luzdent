@@ -36,6 +36,15 @@ export const Navbar = () => {
 
           <li>
             <a
+              href="#equipo"
+              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
+            >
+              Equipo
+            </a>
+          </li>
+
+          <li>
+            <a
               href="#testimonios"
               className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
             >

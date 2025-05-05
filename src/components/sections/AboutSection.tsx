@@ -38,9 +38,11 @@ export const AboutSection = () => {
                 </li>
               ))}
             </ul>
-            <Button className="mt-4 bg-cyan-600 hover:bg-cyan-700">
-              Conoce a nuestro equipo
-            </Button>
+            <a href="#equipo">
+              <Button className="mt-4 bg-cyan-600 hover:bg-cyan-700">
+                Conoce a nuestro equipo
+              </Button>
+            </a>
           </div>
         </div>
       </div>

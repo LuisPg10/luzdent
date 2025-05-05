@@ -6,6 +6,7 @@ import {
   AboutSection,
   TestimonialSection,
   ContactSection,
+  TeamSection,
 } from '@/components/sections';
 import { FooterInfo } from '@/components/footer/FooterInfo';
 
@@ -24,6 +25,8 @@ export default function MainPage() {
         <ServiceSection />
 
         <AboutSection />
+
+        <TeamSection />
 
         <TestimonialSection />
 
