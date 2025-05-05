@@ -1,10 +1,12 @@
 import { Navbar } from '@/components/ui/Navbar';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { AditionalInfoSection } from '@/components/sections/AditionalInfoSection';
-import { ServiceSection } from '@/components/sections/ServiceSection';
-import { AboutSection } from '@/components/sections/AboutSection';
-import { TestimonialSection } from '@/components/sections/TestimonialSection';
-import { ContactSection } from '@/components/sections/ContactSection';
+import {
+  HeroSection,
+  AditionalInfoSection,
+  ServiceSection,
+  AboutSection,
+  TestimonialSection,
+  ContactSection,
+} from '@/components/sections';
 import { FooterInfo } from '@/components/footer/FooterInfo';
 
 export default function MainPage() {
