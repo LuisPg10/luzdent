@@ -1,3 +1,4 @@
+import { options } from '@/data/navbar-content';
 import { Button } from './button';
 
 export const Navbar = () => {
@@ -7,59 +8,16 @@ export const Navbar = () => {
 
       <nav className="hidden md:flex">
         <ul className="flex gap-6">
-          <li>
-            <a
-              href="#inicio"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Inicio
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#servicios"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Servicios
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#nosotros"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Nosotros
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#equipo"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Equipo
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#testimonios"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Testimonios
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#contacto"
-              className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
-            >
-              Contacto
-            </a>
-          </li>
+          {options.map((option, i) => (
+            <li key={i}>
+              <a
+                href={option.link}
+                className="relative text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-600 after:transition-all after:duration-300 hover:text-cyan-600 hover:after:w-full"
+              >
+                {option.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
