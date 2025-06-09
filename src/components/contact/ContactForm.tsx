@@ -1,48 +1,65 @@
-import { FormEvent } from 'react';
+import { useForm } from 'react-hook-form';
 
 import { serviceOptions } from '@/data/section-contents';
+import { ContactFormInputs } from '@/types/ContactFormInputs';
+import { contactFormErrors } from '@/errors/contact-form-errors';
 import { Button } from '../ui/button';
 import { Input } from '../ui/Input';
 import { Options } from '../ui/Options';
 import { TextArea } from '../ui/TextArea';
 
 export const ContactForm = () => {
-  const onFormSumit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Envío del formulario realizado');
+  const {
+    formState: { errors },
+    handleSubmit,
+    register,
+  } = useForm<ContactFormInputs>();
+
+  const onFormSumit = (contactData: ContactFormInputs) => {
+    console.log(contactData);
   };
 
   return (
-    <form onSubmit={onFormSumit} className="space-y-4">
+    <form onSubmit={handleSubmit(onFormSumit)} className="space-y-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Input type="text" name="name" label="Nombre" placeholder="Tu nombre" />
         <Input
           type="text"
-          name="last-name"
+          label="Nombre"
+          placeholder="Tu nombre"
+          error={errors.name?.message}
+          {...register('name', { required: contactFormErrors.name })}
+        />
+        <Input
+          type="text"
           label="Apellido"
           placeholder="Tu apellido"
+          error={errors.lastName?.message}
+          {...register('lastName', { required: contactFormErrors.lastName })}
         />
       </div>
 
       <div className="flex flex-col gap-3">
         <Input
           type="email"
-          name="email"
-          label="Email"
+          label="Correo"
           placeholder="nombre@email.com"
+          {...register('email')}
         />
 
         <Input
           type="tel"
-          name="phone"
           label="Teléfono"
           placeholder="300 256 4356"
+          error={errors.phone?.message}
+          {...register('phone', { required: contactFormErrors.phone })}
         />
 
         <Options
           id="service"
           label="Servicio de interés"
+          error={errors.service?.message}
           defaultOption="Selecciona un servicio"
+          {...register('service', { required: contactFormErrors.service })}
         >
           {serviceOptions.map(({ value, text }, i) => (
             <option key={i} value={value}>
@@ -55,6 +72,7 @@ export const ContactForm = () => {
           id="message"
           label="Mensaje"
           placeholder="Cuentanos más sobre tu consulta"
+          {...register('message')}
         />
       </div>
 

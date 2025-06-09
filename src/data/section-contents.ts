@@ -1,3 +1,4 @@
+import { InterestDentistryService } from '@/types/InterestDentistryService';
 import {
   CheckCircle,
   Clock,
@@ -115,10 +116,16 @@ export const contactContent = [
 ];
 
 export const serviceOptions = [
-  { value: 'general', text: 'Odontología general' },
-  { value: 'ortodoncia', text: 'Ortodoncia' },
-  { value: 'implantes', text: 'Implantes dentales' },
-  { value: 'estetica', text: 'Estética dental' },
-  { value: 'pediatria', text: 'Odontopediatría' },
-  { value: 'periodoncia', text: 'Periodoncia' },
+  {
+    value: InterestDentistryService.GeneralDentistry,
+    text: 'Odontología general',
+  },
+  { value: InterestDentistryService.Orthodontics, text: 'Ortodoncia' },
+  {
+    value: InterestDentistryService.DentalImplants,
+    text: 'Implantes dentales',
+  },
+  { value: InterestDentistryService.DentalAesthetics, text: 'Estética dental' },
+  { value: InterestDentistryService.EdiatricOdont, text: 'Odontopediatría' },
+  { value: InterestDentistryService.Periodontics, text: 'Periodoncia' },
 ];
