@@ -2,6 +2,7 @@ import { SelectHTMLAttributes } from 'react';
 
 type MultiOptionsProps = {
   label?: string;
+  error?: string;
   defaultOption?: string;
   children?: React.ReactNode;
 } & SelectHTMLAttributes<HTMLSelectElement>;
@@ -9,6 +10,7 @@ type MultiOptionsProps = {
 export const Options = ({
   id,
   label,
+  error,
   name,
   defaultOption,
   children,
@@ -31,6 +33,12 @@ export const Options = ({
         {defaultOption && <option value="">{defaultOption}</option>}
         {children}
       </select>
+
+      {error && (
+        <span className="mt-2 ml-2 inline-block text-sm text-red-500">
+          {error}
+        </span>
+      )}
     </div>
   );
 };
