@@ -23,6 +23,8 @@ export const ContactForm = () => {
     <form onSubmit={handleSubmit(onFormSumit)} className="space-y-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Input
+          required
+          id='name'
           type="text"
           label="Nombre"
           placeholder="Tu nombre"
@@ -30,6 +32,7 @@ export const ContactForm = () => {
           {...register('name', { required: contactFormErrors.name })}
         />
         <Input
+          required
           type="text"
           label="Apellido"
           placeholder="Tu apellido"
@@ -47,6 +50,7 @@ export const ContactForm = () => {
         />
 
         <Input
+          required
           type="tel"
           label="Teléfono"
           placeholder="300 256 4356"
