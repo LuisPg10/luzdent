@@ -13,17 +13,21 @@ export const Options = ({
   error,
   name,
   defaultOption,
+  required,
   children,
   ...inputProps
 }: MultiOptionsProps) => {
   return (
     <div>
-      <label
-        htmlFor={id}
-        className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          htmlFor={id}
+          className="ml-1 text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          {label} {required && <span className="text-red-500">*</span>}
+        </label>
+      )}
+
       <select
         {...inputProps}
         id={id}

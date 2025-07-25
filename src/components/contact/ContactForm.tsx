@@ -24,7 +24,7 @@ export const ContactForm = () => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Input
           required
-          id='name'
+          id="name"
           type="text"
           label="Nombre"
           placeholder="Tu nombre"
@@ -33,6 +33,7 @@ export const ContactForm = () => {
         />
         <Input
           required
+          id="lastName"
           type="text"
           label="Apellido"
           placeholder="Tu apellido"
@@ -43,6 +44,7 @@ export const ContactForm = () => {
 
       <div className="flex flex-col gap-3">
         <Input
+          id="email"
           type="email"
           label="Correo"
           placeholder="nombre@email.com"
@@ -51,6 +53,7 @@ export const ContactForm = () => {
 
         <Input
           required
+          id="phone"
           type="tel"
           label="Teléfono"
           placeholder="300 256 4356"
@@ -59,6 +62,7 @@ export const ContactForm = () => {
         />
 
         <Options
+          required
           id="service"
           label="Servicio de interés"
           error={errors.service?.message}
