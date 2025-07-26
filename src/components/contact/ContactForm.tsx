@@ -1,26 +1,16 @@
-import { useForm } from 'react-hook-form';
-
 import { serviceOptions } from '@/data/section-contents';
-import { ContactFormInputs } from '@/types/ContactFormInputs';
 import { contactFormErrors } from '@/errors/contact-form-errors';
+import { useContactForm } from '@/hooks/use-contact-form';
 import { Button } from '../ui/button';
 import { Input } from '../ui/Input';
 import { Options } from '../ui/Options';
 import { TextArea } from '../ui/TextArea';
 
 export const ContactForm = () => {
-  const {
-    formState: { errors },
-    handleSubmit,
-    register,
-  } = useForm<ContactFormInputs>();
-
-  const onFormSumit = (contactData: ContactFormInputs) => {
-    console.log(contactData);
-  };
+  const { errors, onFormSubmit, onPhoneChange, register } = useContactForm();
 
   return (
-    <form onSubmit={handleSubmit(onFormSumit)} className="space-y-4">
+    <form onSubmit={onFormSubmit} className="space-y-4" noValidate>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Input
           required
@@ -29,8 +19,13 @@ export const ContactForm = () => {
           label="Nombre"
           placeholder="Tu nombre"
           error={errors.name?.message}
-          {...register('name', { required: contactFormErrors.name })}
+          {...register('name', {
+            required: contactFormErrors.name.required,
+            minLength: { value: 2, message: contactFormErrors.name.minLength },
+            maxLength: { value: 50, message: contactFormErrors.name.maxLength },
+          })}
         />
+
         <Input
           required
           id="lastName"
@@ -38,7 +33,17 @@ export const ContactForm = () => {
           label="Apellido"
           placeholder="Tu apellido"
           error={errors.lastName?.message}
-          {...register('lastName', { required: contactFormErrors.lastName })}
+          {...register('lastName', {
+            required: contactFormErrors.lastName.required,
+            minLength: {
+              value: 2,
+              message: contactFormErrors.lastName.minLength,
+            },
+            maxLength: {
+              value: 50,
+              message: contactFormErrors.lastName.maxLength,
+            },
+          })}
         />
       </div>
 
@@ -48,7 +53,13 @@ export const ContactForm = () => {
           type="email"
           label="Correo"
           placeholder="nombre@email.com"
-          {...register('email')}
+          error={errors.email?.message}
+          {...register('email', {
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: contactFormErrors.email.format,
+            },
+          })}
         />
 
         <Input
@@ -58,7 +69,14 @@ export const ContactForm = () => {
           label="Teléfono"
           placeholder="300 256 4356"
           error={errors.phone?.message}
-          {...register('phone', { required: contactFormErrors.phone })}
+          {...register('phone', {
+            required: contactFormErrors.phone.required,
+            minLength: {
+              value: 12,
+              message: contactFormErrors.phone.minLength,
+            },
+            onChange: onPhoneChange,
+          })}
         />
 
         <Options
@@ -67,7 +85,9 @@ export const ContactForm = () => {
           label="Servicio de interés"
           error={errors.service?.message}
           defaultOption="Selecciona un servicio"
-          {...register('service', { required: contactFormErrors.service })}
+          {...register('service', {
+            required: contactFormErrors.service.required,
+          })}
         >
           {serviceOptions.map(({ value, text }, i) => (
             <option key={i} value={value}>
