@@ -7,7 +7,7 @@ import { Options } from '../ui/Options';
 import { TextArea } from '../ui/TextArea';
 
 export const ContactForm = () => {
-  const { errors, onFormSubmit, onPhoneChange, register } = useContactForm();
+  const { errors, onFormSubmit, register } = useContactForm();
 
   return (
     <form onSubmit={onFormSubmit} className="space-y-4" noValidate>
@@ -48,37 +48,6 @@ export const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-3">
-        <Input
-          id="email"
-          type="email"
-          label="Correo"
-          placeholder="nombre@email.com"
-          error={errors.email?.message}
-          {...register('email', {
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: contactFormErrors.email.format,
-            },
-          })}
-        />
-
-        <Input
-          required
-          id="phone"
-          type="tel"
-          label="Teléfono"
-          placeholder="300 256 4356"
-          error={errors.phone?.message}
-          {...register('phone', {
-            required: contactFormErrors.phone.required,
-            minLength: {
-              value: 12,
-              message: contactFormErrors.phone.minLength,
-            },
-            onChange: onPhoneChange,
-          })}
-        />
-
         <Options
           required
           id="service"
