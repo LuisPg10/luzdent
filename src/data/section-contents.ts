@@ -1,4 +1,3 @@
-import { InterestDentistryService } from '@/types/InterestDentistryService';
 import {
   CheckCircle,
   Clock,
@@ -8,6 +7,8 @@ import {
   Star,
   User,
 } from 'lucide-react';
+
+import { InterestDentistryService } from '@/types/InterestDentistryService';
 
 //* ADITIONAL INFO
 export const infoContent = [
@@ -39,37 +40,39 @@ export const serviceContent = [
     title: 'Odontología general',
     description:
       'Limpiezas, empastes, extracciones y tratamientos preventivos para mantener tu salud bucal.',
-    image: '',
+    image: new URL('../assets/images/odontology.jpg', import.meta.url).href,
   },
   {
     title: 'Ortodoncia',
     description:
       'Brackets tradicionales, invisibles y otros tratamientos para corregir la posición de tus dientes.',
-    image: '',
+    image: new URL('../assets/images/orthodontics.jpg', import.meta.url).href,
   },
   {
     title: 'Implantes dentales',
     description:
       'Soluciones permanentes para reemplazar dientes perdidos con resultados naturales.',
-    image: '',
+    image: new URL('../assets/images/dental-implants.jpg', import.meta.url)
+      .href,
   },
   {
     title: 'Estética dental',
     description:
       'Blanqueamientos, carillas y otros procedimientos para mejorar la apariencia de tu sonrisa.',
-    image: '',
+    image: new URL('../assets/images/dental-aesthetics.jpg', import.meta.url)
+      .href,
   },
   {
     title: 'Odontopediatría',
     description:
       'Atención especializada para los más pequeños en un ambiente amigable y seguro.',
-    image: '',
+    image: new URL('../assets/images/ediatric-odont.jpg', import.meta.url).href,
   },
   {
     title: 'Periodoncia',
     description:
       'Tratamientos para las enfermedades de las encías y tejidos que soportan los dientes.',
-    image: '',
+    image: new URL('../assets/images/periodontics.jpg', import.meta.url).href,
   },
 ];
 
