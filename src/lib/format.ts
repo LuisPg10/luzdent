@@ -8,3 +8,7 @@ export const stringToPhoneNumber = (value: string) => {
 export const phoneNumberToString = (value: string) => {
   return value.split(' ').join('');
 };
+
+export const messageToUriComponent = (value: string) => {
+  return encodeURIComponent(value);
+};

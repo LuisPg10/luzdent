@@ -1,8 +1,10 @@
 import { ChangeEvent } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { phoneNumberToString, stringToPhoneNumber } from '@/lib/format';
+import { stringToPhoneNumber } from '@/lib/format';
+import { sendWhatsAppMessage } from '@/lib/send-data';
 import { ContactFormInputs } from '@/types/ContactFormInputs';
+import { whatsAppMessage } from '@/data/messages';
 
 export const useContactForm = () => {
   const {
@@ -13,10 +15,10 @@ export const useContactForm = () => {
   } = useForm<ContactFormInputs>();
 
   const sendData = (contactData: ContactFormInputs) => {
-    console.log({
-      ...contactData,
-      phone: phoneNumberToString(contactData.phone),
-    });
+    const { name, lastName, service, message } = contactData;
+    const finalMessage = whatsAppMessage(name, lastName, service, message);
+
+    sendWhatsAppMessage(finalMessage);
   };
 
   const onPhoneChange = ({
