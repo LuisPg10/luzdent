@@ -9,6 +9,10 @@ If you are going to use a different one, remove the corresponding lock file (pac
 bun install
 ```
 
+## Add environment variables
+
+For example `VITE_PHONE_NUMBER=<YOUR PHONE NUMBER>`
+
 ## Execute the project 🚀
 
 Similarly, execute the project in the execution environment of your preference or with the preferred package manager.
