@@ -4,5 +4,5 @@ export const whatsAppMessage = (
   service: string,
   message: string
 ) => {
-  return `Hola, me gustaría apartar una cita en su consultorio\n${message ? '\n' + message + '\n' : ''}\nNombre: ${name}\nApellido: ${lastName}\nServicio: ${service}\n\nEspero su pronta respuesta`;
+  return `Hola, me gustaría apartar una cita en su consultorio.\n${message ? '\n' + message + '\n' : ''}\n*Nombre:* ${name}\n*Apellido:* ${lastName}\n*Servicio:* ${service}\n\nEspero su pronta respuesta.`;
 };
