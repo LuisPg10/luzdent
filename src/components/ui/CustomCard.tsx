@@ -33,6 +33,7 @@ export const CustomCard = ({
           src={image}
           alt={title}
           className="h-48 w-full rounded-t-xl object-cover"
+          loading="lazy"
         />
       )}
 
