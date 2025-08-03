@@ -7,9 +7,9 @@ export const TeamSection = () => {
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
+            <p className="inline-block rounded-lg bg-cyan-100 px-3 py-1 text-sm text-cyan-800">
               Nuestro equipo
-            </div>
+            </p>
             <h2 className="text-3xl font-bold tracking-tighter text-cyan-800 sm:text-5xl">
               Profesionales que cuidan de tu sonrisa
             </h2>
@@ -22,13 +22,13 @@ export const TeamSection = () => {
 
         <div className="mx-auto max-w-4xl py-12">
           <div className="overflow-hidden rounded-xl border border-cyan-100 bg-white shadow-md transition-all hover:shadow-lg">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-2/5">
+            <div className="flex flex-col sm:flex-row">
+              <div className="sm:w-6xl md:w-2/5">
                 <img
                   src={profile || placeHolderImage}
                   alt="Foto del Dr. Daison Gómez"
-                  width={400}
-                  height={400}
+                  width={431}
+                  height={578}
                   loading="lazy"
                   className="h-full w-full object-cover"
                 />
