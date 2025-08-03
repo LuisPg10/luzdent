@@ -1,4 +1,5 @@
 import placeHolderImage from '../../assets/placeholder.svg';
+import profile from '../../assets/images/profile.png';
 
 export const TeamSection = () => {
   return (
@@ -24,10 +25,11 @@ export const TeamSection = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-2/5">
                 <img
-                  src={placeHolderImage}
-                  alt="Foto de la Dra. María Fernández"
+                  src={profile || placeHolderImage}
+                  alt="Foto del Dr. Daison Gómez"
                   width={400}
                   height={400}
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -40,10 +42,10 @@ export const TeamSection = () => {
                 </p>
                 <p className="text-gray-500">
                   Con más de 15 años de experiencia en odontología general y
-                  estética dental, el Dr. Gómez lidera nuestro equipo con
-                  pasión y dedicación. Graduado con honores de la Universidad
-                  Nacional de Odontología, ha completado múltiples
-                  especializaciones en Europa y Estados Unidos.
+                  estética dental, el Dr. Gómez lidera nuestro equipo con pasión
+                  y dedicación. Graduado con honores de la Universidad Nacional
+                  de Odontología, ha completado múltiples especializaciones en
+                  Europa y Estados Unidos.
                 </p>
               </div>
             </div>
