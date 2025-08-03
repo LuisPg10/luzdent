@@ -1,6 +1,7 @@
 import { Button } from '../ui/button';
 
 import placeHolderImage from '../../assets/placeholder.svg';
+import heroImage from '../../assets/images/hero-image.jpg';
 
 export const HeroSection = () => {
   return (
@@ -37,11 +38,12 @@ export const HeroSection = () => {
           </div>
           <div className="mx-auto w-full max-w-[500px] lg:max-w-none">
             <img
-              src={placeHolderImage}
+              src={heroImage || placeHolderImage}
               width="550"
               height="550"
-              alt="Equipo médico de la clínica dental"
-              className="w-full rounded-xl object-cover shadow-xl"
+              alt="Persona siendo atentida en la clínica odontológica"
+              className="w-full rounded-xl object-none shadow-xl"
+              loading="lazy"
             />
           </div>
         </div>
