@@ -3,7 +3,6 @@ import {
   HeroSection,
   AditionalInfoSection,
   ServiceSection,
-  AboutSection,
   TestimonialSection,
   ContactSection,
   TeamSection,
@@ -24,7 +23,7 @@ export default function MainPage() {
 
         <ServiceSection />
 
-        <AboutSection />
+        {/* <AboutSection /> */}
 
         <TeamSection />
 
