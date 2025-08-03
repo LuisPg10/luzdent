@@ -41,7 +41,7 @@ export const HeroSection = () => {
               src={heroImage || placeHolderImage}
               width="550"
               height="550"
-              alt="Equipo médico de la clínica dental"
+              alt="Persona siendo atentida en la clínica odontológica"
               className="w-full rounded-xl object-none shadow-xl"
               loading="lazy"
             />
