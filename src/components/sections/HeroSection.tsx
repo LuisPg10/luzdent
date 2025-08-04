@@ -42,7 +42,7 @@ export const HeroSection = () => {
               width="550"
               height="550"
               alt="Persona siendo atentida en la clínica odontológica"
-              className="w-full rounded-xl object-none shadow-xl"
+              className="w-full rounded-xl object-cover shadow-xl"
               loading="lazy"
             />
           </div>
