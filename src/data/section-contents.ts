@@ -20,9 +20,9 @@ export const infoContent = [
   },
 
   {
-    title: 'Profesionales expertos',
+    title: 'Trato humano y cercano',
     description:
-      'Nuestro equipo está formado por especialistas con amplia experiencia en todas las áreas de la odontología.',
+      'Más que pacientes, tratamos personas. Con empatía, respeto y calidez en cada consulta.',
     icon: User,
   },
 
@@ -86,13 +86,13 @@ export const aboutContent = [
 //* INFO FOR TESTIMONIAL CONTENT
 export const testimonialContent = [
   {
-    name: 'María González',
-    text: 'Excelente atención y profesionalismo. Me realizaron un tratamiento de ortodoncia y estoy muy satisfecha con los resultados.',
+    name: 'José Arango',
+    text: 'Excelente atención. El tratamiento fue indoloro y salí muy satisfecho con los resultados, 100% recomendado.',
     rating: 5,
   },
   {
-    name: 'Carlos Rodríguez',
-    text: 'Llevaba años con miedo al dentista hasta que encontré esta clínica. El trato es excepcional y los tratamientos prácticamente indoloros.',
+    name: 'Deicy Díaz',
+    text: 'Me extrajeron una cordal complicada sin ningún problema. Todo fue rápido, seguro y con una recuperación perfecta.',
     rating: 5,
   },
   {
