@@ -41,11 +41,11 @@ export const TeamSection = () => {
                   Odontólogo General
                 </p>
                 <p className="text-gray-500">
-                  Con más de 15 años de experiencia en odontología general y
-                  estética dental, el Dr. Gómez lidera nuestro equipo con pasión
-                  y dedicación. Graduado con honores de la Universidad Nacional
-                  de Odontología, ha completado múltiples especializaciones en
-                  Europa y Estados Unidos.
+                  Odontólogo general con especialización en endodoncia y
+                  formación en alta estética dental, toxina botulínica y ácido
+                  hialurónico. Brinda soluciones integrales para transformar tu
+                  sonrisa, realzar tu belleza natural y mejorar tu bienestar con
+                  técnicas seguras, modernas y personalizadas.
                 </p>
               </div>
             </div>
