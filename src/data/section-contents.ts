@@ -97,7 +97,7 @@ export const testimonialContent = [
   },
   {
     name: 'Laura Martínez',
-    text: 'Mi hijo de 5 años tenía pánico al dentista, pero el equipo de odontopediatría supo ganarse su confianza. Ahora va encantado a sus revisiones.',
+    text: 'Mi hijo de 5 años tenía pánico al dentista, pero en esta clínica supieron ganarse su confianza. Ahora va encantado a sus revisiones.',
     rating: 5,
   },
 ];
