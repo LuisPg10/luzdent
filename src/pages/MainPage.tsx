@@ -8,8 +8,14 @@ import {
   TeamSection,
 } from '@/components/sections';
 import { FooterInfo } from '@/components/footer/FooterInfo';
+import { useEffect } from 'react';
+import { scrollToHash } from '@/lib/scroll-to-hash';
 
 export default function MainPage() {
+  useEffect(() => {
+    scrollToHash();
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-white">
