@@ -38,14 +38,13 @@ export const TeamSection = () => {
                   Dr. Daison Daniel Gómez Pinto
                 </h3>
                 <p className="mb-4 text-lg font-medium text-cyan-600">
-                  Odontólogo General
+                  Odontólogo especialista en endodoncia
                 </p>
                 <p className="text-gray-500">
-                  Especialista en endodoncia con formación en alta estética
-                  dental, toxina botulínica y ácido hialurónico. Brinda
-                  soluciones integrales para transformar tu sonrisa, realzar tu
-                  belleza natural y mejorar tu bienestar con técnicas seguras,
-                  modernas y personalizadas.
+                  Con formación en alta estética dental, toxina botulínica y
+                  ácido hialurónico. Brinda soluciones integrales para
+                  transformar tu sonrisa, realzar tu belleza natural y mejorar
+                  tu bienestar con técnicas seguras, modernas y personalizadas.
                 </p>
               </div>
             </div>

@@ -63,10 +63,10 @@ export const serviceContent = [
       .href,
   },
   {
-    title: 'Odontopediatría',
+    title: 'Endodoncia',
     description:
-      'Atención especializada para los más pequeños en un ambiente amigable y seguro.',
-    image: new URL('../assets/images/ediatric-odont.jpg', import.meta.url).href,
+      'Tratamiento para eliminar infecciones y salvar dientes dañados, evitando su extracción.',
+    image: new URL('../assets/images/endodontics.jpg', import.meta.url).href,
   },
   {
     title: 'Periodoncia',
