@@ -41,11 +41,11 @@ export const TeamSection = () => {
                   Odontólogo General
                 </p>
                 <p className="text-gray-500">
-                  Odontólogo general con especialización en endodoncia y
-                  formación en alta estética dental, toxina botulínica y ácido
-                  hialurónico. Brinda soluciones integrales para transformar tu
-                  sonrisa, realzar tu belleza natural y mejorar tu bienestar con
-                  técnicas seguras, modernas y personalizadas.
+                  Especialista en endodoncia con formación en alta estética
+                  dental, toxina botulínica y ácido hialurónico. Brinda
+                  soluciones integrales para transformar tu sonrisa, realzar tu
+                  belleza natural y mejorar tu bienestar con técnicas seguras,
+                  modernas y personalizadas.
                 </p>
               </div>
             </div>
