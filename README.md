@@ -1,4 +1,4 @@
-# LuzDent Project
+# Luz Dent Project
 
 ## Install dependencies ⚙️
 
