@@ -12,6 +12,9 @@ import { FooterInfo } from '@/components/footer/FooterInfo';
 import { scrollToHash } from '@/lib/scroll-to-hash';
 
 import whatsappLogo from '../assets/images/whatsapp-logo.svg';
+import { getEnvironment } from '@/config/environment';
+
+const { VITE_PHONE_NUMBER } = getEnvironment();
 
 export default function MainPage() {
   useEffect(() => {
@@ -59,7 +62,7 @@ export default function MainPage() {
       </footer>
 
       <a
-        href="https://wa.me/573004010980"
+        href={`https://wa.me/${VITE_PHONE_NUMBER}`}
         target="_blank"
         className="fixed right-6 bottom-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] md:right-10"
       >
