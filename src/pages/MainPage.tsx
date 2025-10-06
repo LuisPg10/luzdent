@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Navbar } from '@/components/ui/Navbar';
 import {
   HeroSection,
@@ -8,8 +9,9 @@ import {
   TeamSection,
 } from '@/components/sections';
 import { FooterInfo } from '@/components/footer/FooterInfo';
-import { useEffect } from 'react';
 import { scrollToHash } from '@/lib/scroll-to-hash';
+
+import whatsappLogo from '../assets/images/whatsapp-logo.svg';
 
 export default function MainPage() {
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-white">
         <Navbar />
       </header>
@@ -55,6 +57,19 @@ export default function MainPage() {
           </div>
         </div>
       </footer>
+
+      <a
+        href="https://wa.me/573004010980"
+        target="_blank"
+        className="fixed right-6 bottom-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] md:right-10"
+      >
+        <img
+          width={60}
+          height={60}
+          src={whatsappLogo}
+          alt="Icono de whatsapp"
+        />
+      </a>
     </div>
   );
 }
