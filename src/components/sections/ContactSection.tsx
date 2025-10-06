@@ -38,7 +38,7 @@ export const ContactSection = () => {
           </div>
 
           <div className="space-y-4">
-            <Card id="agendar-cita" className="border-cyan-100 shadow-md">
+            <Card className="border-cyan-100 shadow-md">
               <CardHeader>
                 <CardTitle className="text-xl text-cyan-800">
                   Agenda tu cita

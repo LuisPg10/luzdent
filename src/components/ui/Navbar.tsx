@@ -21,7 +21,7 @@ export const Navbar = () => {
         </ul>
       </nav>
 
-      <a href="#agendar-cita">
+      <a href="#contacto">
         <Button className="mr-2 bg-cyan-600 hover:bg-cyan-700">
           Agendar Cita
         </Button>
