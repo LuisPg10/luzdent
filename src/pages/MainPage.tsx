@@ -64,13 +64,14 @@ export default function MainPage() {
       <a
         href={`https://wa.me/${VITE_PHONE_NUMBER}`}
         target="_blank"
-        className="fixed right-6 bottom-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] md:right-10"
+        className="fixed right-6 bottom-10 md:right-10"
       >
         <img
-          width={60}
-          height={60}
+          width={50}
+          height={50}
           src={whatsappLogo}
           alt="Icono de whatsapp"
+          className="drop-shadow-[2px_2px_5px_green]"
         />
       </a>
     </div>
