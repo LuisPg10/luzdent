@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className="flex h-16 items-center justify-between px-6 md:px-10">
       <h1 className="text-2xl font-bold text-cyan-600">Luz Dent</h1>
 
-      <nav className="hidden md:flex">
+      <nav className="hidden lg:flex">
         <ul className="flex gap-6">
           {options.map((option, i) => (
             <li key={i}>

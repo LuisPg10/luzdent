@@ -10,4 +10,5 @@ export const options: Option[] = [
   { link: '#equipo', text: 'Equipo' },
   { link: '#testimonios', text: 'Testimonios' },
   { link: '#contacto', text: 'Contacto' },
+  { link: '#encuentranos', text: 'Encuentranos' },
 ];

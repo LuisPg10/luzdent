@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { Navbar } from '@/components/ui/Navbar';
 import {
-  HeroSection,
   AditionalInfoSection,
-  ServiceSection,
-  TestimonialSection,
   ContactSection,
+  HeroSection,
+  MapSection,
+  ServiceSection,
   TeamSection,
+  TestimonialSection,
 } from '@/components/sections';
 import { FooterInfo } from '@/components/footer/FooterInfo';
 import { scrollToHash } from '@/lib/scroll-to-hash';
@@ -39,6 +40,8 @@ export default function MainPage() {
         <TeamSection />
 
         <TestimonialSection />
+
+        <MapSection />
 
         <ContactSection />
       </main>
